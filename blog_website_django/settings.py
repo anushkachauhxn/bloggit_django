@@ -132,3 +132,4 @@ CRISPY_TEMPLATE_PACK = "tailwind"
 
 # Login Redirect
 LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL = 'login'
