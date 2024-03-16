@@ -56,15 +56,25 @@
       </div>
     </nav>
 
-    <div class="bg-white dark:bg-gray-900 w-full mt-20">
+    <main class="bg-gray-50 dark:bg-gray-900 w-full mt-20">
       <div class="max-w-screen-xl grid grid-cols-4 gap-4 mx-auto px-4 py-2">
         <div class="col-span-3">
+          {% if messages %}
+            {% for message in messages %}
+              <div 
+                class="p-4 mb-4 text-sm rounded-lg text-blue-800 bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+                role="alert"
+              >
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
           {% block content %}{% endblock %}
         </div>
         <div class="col-span-1">
           <h3>Our Sidebar</h3>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
