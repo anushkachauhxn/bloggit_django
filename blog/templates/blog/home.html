@@ -14,7 +14,9 @@
         <div class="p-5">
           <p class="mb-2 font-normal text-xs text-gray-700 dark:text-gray-400">
             <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{{ post.author }}</a> 
-            <span class="float-right text-[11px]">{{ post.date_posted }}</span>
+            <span class="float-right text-[11px]">
+              {{ post.date_posted|date:"M d, Y" }}
+            </span>
           </p>
 
           <a href="#">
