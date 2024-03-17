@@ -1,6 +1,11 @@
 {% extends 'blog/base.html' %}
-
 {% block content %}
+  <div class="mb-10 text-center">
+    <h1 class="font-bold text-2xl text-gray-800 dark:text-white mb-1">
+      {{ view.kwargs.username }}
+    </h1>
+    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ page_obj.paginator.count }} posts</p>
+  </div>
   <div class="grid grid-cols-3 gap-4">
     {% for post in posts %}
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -41,7 +46,7 @@
   </div>
 
   {% if is_paginated %}
-    <nav class="mt-8 mb-12s">
+    <nav class="mt-8 mb-12">
       <ul class="flex items-center -space-x-px h-10 text-base">
         {% if page_obj.has_previous %}
           <li>

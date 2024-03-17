@@ -12,7 +12,7 @@
         <div class="mb-3 flex items-center justify-between font-normal text-xs text-gray-700 dark:text-gray-400">
           <div class="flex items-center">
             <img src="{{ object.author.profile.image.url }}" class="w-8 h-8 mr-2 p-0.5 ring-2 rounded-full" alt="">
-            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{{ object.author }}</a> 
+            <a href="{% url 'user-profile' object.author.username %}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{{ object.author }}</a> 
           </div>
           <p class="text-[11px]">
             {{ object.date_posted|date:"M d, Y" }}
